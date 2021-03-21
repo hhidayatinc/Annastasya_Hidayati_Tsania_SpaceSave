@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Crystals : MonoBehaviour
+public class Crystal : MonoBehaviour
 {
     public Text crystalText;
-    private int totalCrystals;
+    private int totalCrystal=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,16 +13,18 @@ public class Crystals : MonoBehaviour
     }
 
     // Update is called once per frame
+    void UpdateCrystalText()
+    {
+        string crystalMessage = "Crystals = " + totalCrystal;
+        crystalText.text = crystalMessage;
+    }
+
     void OnTriggerEnter2D(Collider2D hit) {
         if(hit.CompareTag("Crystal")){
-            totalCrystals++;
+            totalCrystal++;
             UpdateCrystalText();
             Destroy(hit.gameObject);
         }
-    }
-
-    private void UpdateCrystalText(){
-        string crystalMessage = "Crystals = " + totalCrystals;
-        crystalText.text = crystalMessage;
+        
     }
 }
