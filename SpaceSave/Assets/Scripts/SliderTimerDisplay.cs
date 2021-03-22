@@ -6,7 +6,7 @@ public class SliderTimerDisplay : MonoBehaviour
 {
 	private CountdownTimer countdownTimer;
 	private Slider sliderUI;
-	private int startSeconds = 30;
+	private int startSeconds = 10;
 
 	//----------------------------
 	void Start ()
