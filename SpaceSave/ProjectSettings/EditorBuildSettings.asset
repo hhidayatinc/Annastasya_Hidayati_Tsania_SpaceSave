@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameCongrats.unity
     guid: 0bc1a4863189fae4bb238377aae250ac
+  - enabled: 1
+    path: Assets/Scenes/loading2.unity
+    guid: c8b3d415e6e97d447b4efa90a629fd75
   m_configObjects: {}

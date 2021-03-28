@@ -12,7 +12,7 @@ public class Crystal : MonoBehaviour
     void Start()
     {
         UpdateCrystalText();
-        playerInventoryDisplay = GetComponent<PlayerInventoryDisplay>();
+        
     }
 
     // Update is called once per frame
@@ -30,8 +30,8 @@ public class Crystal : MonoBehaviour
         }
         if(hit.CompareTag("Asteroid")){
                 totalAsteroid++;
-                playerInventoryDisplay.OnChangeHeartTotal(totalAsteroid);
-                Destroy(hit.gameObject);
+               
+                
             }
         
     }
