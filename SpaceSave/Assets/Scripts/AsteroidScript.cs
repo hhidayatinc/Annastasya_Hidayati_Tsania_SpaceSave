@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AsteroidScript : MonoBehaviour
 {
+     
     void OnTriggerEnter2D(Collider2D col)
     {
         GameControlScript.health -= 1;
     }
+
 }

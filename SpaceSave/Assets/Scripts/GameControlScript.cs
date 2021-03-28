@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
     public static int health;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,7 @@ public class GameControlScript : MonoBehaviour
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
         gameOver.gameObject.SetActive(false);
+        Time.timeScale = 1;//digunakan untuk menjalankan kembali player atau permainan setelah gameover
     }
 
     // Update is called once per frame
@@ -43,8 +46,9 @@ public class GameControlScript : MonoBehaviour
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
-                Time.timeScale = 0;
+                Time.timeScale = 0;//digunakan untuk mengehntikan atau menjeda permainan ketika heart habis
                 break;
+            
         }
     }
 }
