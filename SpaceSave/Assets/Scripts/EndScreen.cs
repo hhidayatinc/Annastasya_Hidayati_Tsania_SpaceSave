@@ -11,6 +11,7 @@ public class EndScreen : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Endscrn.gameObject.SetActive(true);
+             Time.timeScale = 0;
         }
     }
 
